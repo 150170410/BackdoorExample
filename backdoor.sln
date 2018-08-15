@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backdoor.Droid", "Droid\bac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backdoor.UITests", "UITests\backdoor.UITests.csproj", "{15C2709E-D0AE-418E-A07C-3473ADB4F3E3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "upload scripts", "upload scripts", "{56B90375-9000-4CB1-9444-5B571934FF91}"
+	ProjectSection(SolutionItems) = preProject
+		android.sh = android.sh
+		ios.sh = ios.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
