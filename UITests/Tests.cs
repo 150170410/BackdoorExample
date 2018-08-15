@@ -33,15 +33,15 @@ namespace backdoor.UITests
             string backdoorValue = "Welcome";
             if (platform == Platform.iOS) {
                 backdoorValue = app.Invoke ("BackdoorMethod:", // notice the colon :
-                    "abc").ToString();
+                    "Running on iOS").ToString();
             } else if (platform == Platform.Android) {
                 backdoorValue = app.Invoke ("BackdoorMethod", // notice no colon :
-                    "abc").ToString();
+                    "Running on Android").ToString();
             }
 
             Console.WriteLine ("backdoorValue:" + backdoorValue);
 
-            app.Screenshot ("Welcome screen.");
+            app.Screenshot (backdoorValue);
             Assert.IsTrue (backdoorValue.Contains("Executed Backdoor"));
             Assert.IsTrue (results.Any ());
         }

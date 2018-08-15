@@ -27,7 +27,8 @@ namespace backdoor.iOS
         [Export("BackdoorMethod:")]
         public NSString BackdoorMethod(NSString backdoorId)
         {
-            return new NSString("Executed Backdoor");
+            Console.WriteLine(backdoorId);
+            return new NSString("Executed Backdoor on iOS");
         }
 
     }

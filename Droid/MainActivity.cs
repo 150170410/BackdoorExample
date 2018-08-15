@@ -26,7 +26,8 @@ namespace backdoor.Droid
         [Export("BackdoorMethod")]
         public string BackdoorMethod(string backdoorId)
         {
-            return "Executed Backdoor";
+            Console.WriteLine(backdoorId);
+            return "Executed Backdoor on Android";
         }
     }
 }
