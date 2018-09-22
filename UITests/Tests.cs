@@ -31,6 +31,8 @@ namespace backdoor.UITests
         {
             AppResult[] results = app.WaitForElement (c => c.Marked ("Welcome to Xamarin Forms!"));
             string backdoorValue = "Welcome";
+
+            // Triggers Platform-specific Backdoor method in each respective app
             if (platform == Platform.iOS) {
                 backdoorValue = app.Invoke ("BackdoorMethod:", // notice the colon :
                     "Running on iOS").ToString();
